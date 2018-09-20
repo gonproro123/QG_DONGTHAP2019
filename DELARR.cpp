@@ -1,5 +1,6 @@
-#include <bits/stdc++.h>
 
+#include <fstream>
+#include <algorithm>
 
 using namespace std;
 ifstream fin("DELARR.INP");
@@ -7,21 +8,21 @@ ofstream fout("DELARR.OUT");
 typedef long long ll;
 const int SIZE = 1E5 +5 ;
 
-ll a[SIZE],b[SIZE];
+ll a[SIZE],tong;
 int n;
 
 void Input_Init()
 {
     fin>>n;
     for(int i=1;i<=n;i++)
+    {
         fin>>a[i];
+        tong+=a[i];
+    }
     sort(a+1,a+n+1);
-    for(int i=1;i<=n;i++)
-        b[i]=b[i-1]+a[i];
 }
 void Solve()
 {
-    ll tong=b[n];
     int i=1;
     int j=n;
     int Count=0;
