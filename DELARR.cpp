@@ -2,8 +2,7 @@
 
 
 using namespace std;
-ifstream fin("DELARR.INP");
-ifstream fout("DELARR.OUT");
+
 typedef long long ll;
 const int SIZE = 1E5 +5 ;
 
