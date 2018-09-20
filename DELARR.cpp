@@ -2,7 +2,8 @@
 
 
 using namespace std;
-
+ifstream fin("DELARR.INP");
+ofstream fout("DELARR.OUT");
 typedef long long ll;
 const int SIZE = 1E5 +5 ;
 
@@ -11,9 +12,9 @@ int n;
 
 void Input_Init()
 {
-    cin>>n;
+    fin>>n;
     for(int i=1;i<=n;i++)
-        cin>>a[i];
+        fin>>a[i];
     sort(a+1,a+n+1);
     for(int i=1;i<=n;i++)
         b[i]=b[i-1]+a[i];
@@ -40,7 +41,7 @@ void Solve()
         }
 
     }
-    cout<<Count;
+    fout<<Count;
 }
 int main()
 {
